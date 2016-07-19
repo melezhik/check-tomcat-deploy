@@ -10,14 +10,20 @@ set_spl %(
 
 task_run  %(
   task => 'install my packages',
-  plugin => 'package-generic-dev',
-  parameters => %( list => 'git nano' )
+  plugin => 'package-generic',
+  parameters => %( list => 'nano' )
 );
 
 task_run  %(
   task => 'setup git',
   plugin => 'git-base',
   parameters => %( email => 'melezhik@gmail.com',  name => "'Alexey Melezhik'" )
+);
+
+task_run  %(
+  task => 'setup nano',
+  plugin => 'nano-setup',
+  parameters => %( )
 );
 
 
