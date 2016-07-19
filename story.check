@@ -15,7 +15,7 @@ do
   echo "code: note qq{$p}";
 
   echo -ne 'generator: note @{stream()->[-1]}[-1]; ' 
-  echo -ne 'my $s = join " ", @{stream()->[-1]}; [ "assert: ". (! ($s=~/SEVERE/)). '
+  echo -ne 'my $s = join " ", @{stream()->[-1]}; [ "assert: ". (! ($s=~/SEVERE: Context/)). '
   echo "qq{ $p deployed OK } ]"
       
 done

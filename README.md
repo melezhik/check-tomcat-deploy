@@ -39,7 +39,7 @@ Reads tomcat logs and checks if war files get deployed successfully
 
 ## tomcat-version
 
-Int, version of tomcat server, for example: 7
+Int, version of tomcat server, for example: 7.
 
 ## war
 
@@ -60,6 +60,10 @@ For example:
 If not set a path to tomcat log file gets resolved as:
 
     /var/log/tomcat<$tomcat-version>/catalina.out    
+
+## lines
+
+Sets the number of lines to read from log file. Default value is `1000`.
 
 # AUTHOR
 

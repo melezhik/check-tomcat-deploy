@@ -1,3 +1,7 @@
 {
+  "name" : "check-tomcat-deploy",
+  "description" : "Reads tomcat logs and checks if war files get deployed successfully",
+  "version" : "0.0.1",
+  "url" : "https://github.com/melezhik/check-tomcat-deploy" 
 }
 
