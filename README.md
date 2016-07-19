@@ -63,7 +63,7 @@ If not set a path to tomcat log file gets resolved as:
 
 ## lines
 
-Sets the number of lines to read from log file. Default value is `1000`.
+Sets the number of lines to read from log file. Default value is `200`.
 
 # AUTHOR
 
