@@ -34,7 +34,7 @@ task_run %(
   plugin => 'check-tomcat-deploy-dev',
   parameters => %(
     tomcat-version => '7',
-    war => 'foo#bar.war,services.war'
+    war => 'guess-a-number.war'
    )
 );
 

@@ -8,8 +8,8 @@ for p in $war
 do
 
   echo  'between \
-        Deploying\sweb\sapplication\sarchive\s\S+/$p \
-        Deployment\sof\sweb\sapplication\sarchive\s\S+/$p\shas\sfinished'
+        Deploying\sweb\sapplication\sarchive\s\S+/'$p' \
+        Deployment\sof\sweb\sapplication\sarchive\s\S+/'$p'\shas\sfinished'
 
   echo regexp: .*
       
