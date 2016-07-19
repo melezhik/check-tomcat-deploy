@@ -1,5 +1,6 @@
-OK
-generator: <<CODE
+#OK
+
+generator: <<CODE1
 !bash
 version=$(config tomcat-version)
 war=$(config war)
@@ -7,15 +8,13 @@ war=$(config war)
 for p in $war
 do
 
-  echo  'between: Deploying\sweb\sapplication\sarchive\s\S+/'$p' ' '\
-'Deployment\sof\sweb\sapplication\sarchive\s\S+/'$p'\shas\sfinished'
-
+  echo between: Deploying Deployment.*finished
   echo regexp: '.*'
       
 done
 
 
-CODE
+CODE1
 
 
 code:  <<CODE
