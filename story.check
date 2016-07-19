@@ -1,6 +1,5 @@
-#OK
 
-generator: <<CODE1
+generator: <<CODE
 !bash
 version=$(config tomcat-version)
 war=$(config war)
@@ -8,22 +7,17 @@ war=$(config war)
 for p in $war
 do
 
-  echo between: Deploying Deployment.*finished
+  echo -n between: Deploying\\sweb\\sapplication\\sarchive\\s\\S+/$p
+  echo -n ' '
+  echo Deployment\\sof\\sweb\\sapplication\\sarchive\\s\\S+\/$p\\shas\\sfinished
   echo regexp: '.*'
+
+  echo -ne 'generator: my $s = join " ", @{stream()->[-1]}; [ "assert: ". (! ($s=~/SEVERE/)). '
+  echo "qq{ $p deployed OK } ]"
       
 done
 
 
-CODE1
-
-
-code:  <<CODE
-        for my $s (@{stream()}) {           
-            print "#";                     
-            for my $i (@{$s}){              
-                print "\t#$i\n";                   
-            }                               
-            print "\n\n\n";                     
-        }
-
 CODE
+
+
