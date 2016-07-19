@@ -21,9 +21,9 @@ code:  <<CODE
         for my $s (@{stream()}) {           
             print "#";                     
             for my $i (@{$s}){              
-                print "\t#$i";                   
+                print "\t#$i\n";                   
             }                               
-            print "\n";                     
+            print "\n\n\n";                     
         }
 
 CODE
