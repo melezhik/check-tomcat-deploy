@@ -12,7 +12,10 @@ do
   echo Deployment\\sof\\sweb\\sapplication\\sarchive\\s\\S+\/$p\\shas\\sfinished
   echo regexp: '.*'
 
-  echo -ne 'generator: my $s = join " ", @{stream()->[-1]}; [ "assert: ". (! ($s=~/SEVERE/)). '
+  echo "code: note qq{$p}";
+
+  echo -ne 'generator: note @{stream()->[-1]}[-1]; ' 
+  echo -ne 'my $s = join " ", @{stream()->[-1]}; [ "assert: ". (! ($s=~/SEVERE/)). '
   echo "qq{ $p deployed OK } ]"
       
 done
