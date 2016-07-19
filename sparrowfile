@@ -8,6 +8,7 @@ set_spl %(
 
 );
 
+#`[
 task_run  %(
   task => 'install my packages',
   plugin => 'package-generic',
@@ -26,4 +27,14 @@ task_run  %(
   parameters => %( )
 );
 
+]
+
+task_run %(
+  task => 'verify tomcat deploy',
+  plugin => 'check-tomcat-deploy-dev',
+  parameters => %(
+    tomcat-version => '7',
+    war => 'foo#bar.war,services.war'
+   )
+);
 
