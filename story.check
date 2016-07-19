@@ -7,7 +7,7 @@ war=$(config war)
 for p in $war
 do
 
-  echo  'between \
+  echo  'between: \
         Deploying\sweb\sapplication\sarchive\s\S+/'$p' \
         Deployment\sof\sweb\sapplication\sarchive\s\S+/'$p'\shas\sfinished'
 
@@ -15,5 +15,17 @@ do
       
 done
 
+
+CODE
+
+
+code:  <<CODE
+        for my $s (@{stream()}) {           
+            print "#";                     
+            for my $i (@{$s}){              
+                print "\t#$i";                   
+            }                               
+            print "\n";                     
+        }
 
 CODE
