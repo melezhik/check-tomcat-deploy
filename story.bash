@@ -1,6 +1,7 @@
 version=$(config tomcat-version)
-if test $(config test_mode); then
-  cat /tmp/catalina.out
+file=$(config file)
+if test $file; then
+  cat $file
 else
   tail -n 1000 /var/log/tomcat$version/catalina.out
 fi

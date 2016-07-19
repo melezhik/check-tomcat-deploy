@@ -1,6 +1,6 @@
 # SYNOPSIS
 
-Reads tomcat logs and checks if war files get deployed successfuly
+Reads tomcat logs and checks if war files get deployed successfully
 
 # INSTALL
 
@@ -11,7 +11,7 @@ Reads tomcat logs and checks if war files get deployed successfuly
 # USAGE
 
 
-## Manualy
+## Manually
 
     $ sparrow plg run check-tomcat-deploy --param war='foo#bar.war,services.war' --param tomcat-version=7
 
@@ -34,3 +34,33 @@ Reads tomcat logs and checks if war files get deployed successfuly
        )
     );
 
+
+# Parameters
+
+## tomcat-version
+
+Int, version of tomcat server, for example: 7
+
+## war
+
+A comma separated list of the war files to get deployed, should not include a directory paths, only war file names.
+
+For example for war files named foo#bar.war and baz.war:
+
+    'foo#bar.war,baz.war'
+
+## file
+
+An optional parameter, you may alternatively sets path to tomcat log file as `file` parameter.
+
+For example:
+
+    file /var/log/apps/catalina.out
+
+If not set a path to tomcat log file gets resolved as:
+
+    /var/log/tomcat<$tomcat-version>/catalina.out    
+
+# AUTHOR
+
+[Alexey Melezhik](mailto:melezhik@gmail.com)

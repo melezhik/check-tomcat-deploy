@@ -4,7 +4,7 @@ generator: <<CODE
 version=$(config tomcat-version)
 war=$(config war)
 
-for p in $war
+for p in $(perl -e "print join ' ', (split ',', qq{$war})")
 do
 
   echo -n between: Deploying\\sweb\\sapplication\\sarchive\\s\\S+/$p
